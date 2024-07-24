@@ -10,6 +10,11 @@ Dependencies > Spring Data JPA, Validation(Hibernate), Web, Flyway, Lombok, MySQ
 Other Dependencies:  
 compileOnly 'org.apache.commons:commons-lang3'  
 
+QueryDSL
+implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+annotationProcessor 'com.querydsl:querydsl-apt:5.0.0:jakarta'
+annotationProcessor 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+
 ### Tools used
 We have used JPA Buddy plugin to create Entities, Repositories, DTOs, Query DSL methods and Queries, Flyway Migration, adding validation for entities
 
@@ -24,6 +29,9 @@ We have used JPA Buddy plugin to create Entities, Repositories, DTOs, Query DSL 
    ProductSpecification - Dynamic filtering
    ModelMapper Utility to convert Product to ProductDTO
 6. Created Read me file - this file
+7. Created AddressController to filter addresses
+   Address Specification and Query DSL - Dynamic Filtering
+   Added dependencies for queryDSL
 
 ### Topics covered
 
@@ -31,6 +39,7 @@ We have used JPA Buddy plugin to create Entities, Repositories, DTOs, Query DSL 
 2. ModelMappers and Dto support for APIs
 3. Flyway migration scripts for DB
 4. Simple RestController with CRUD operations
+5. Projection - To return only required fields in an object. QueryDSL alternative for Specification. StrategyFactory Pattern to dynamically pick the service implementations
 
 ### Endpoints
 
@@ -42,5 +51,8 @@ http://localhost:8070/products/filter?name=laptop&description=256gb&minPrice=100
 http://localhost:8070/products/filter?description=wireless&minPrice=50&maxPrice=1500  
 http://localhost:8070/products/name?name=laptop  
 http://localhost:8070/products/nameContaining?name=smart  
+
+http://localhost:8070/addresses?city=Springfield&state=IL&country=USA&postalCode=62701&userId=1&userName=john_doe&strategy=qdsl  
+http://localhost:8070/addresses?city=Springfield&state=IL&country=USA&postalCode=62701&userId=1&userName=john_doe&strategy=jpa
 
 
