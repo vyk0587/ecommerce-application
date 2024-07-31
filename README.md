@@ -52,7 +52,7 @@ http://localhost:8070/products/filter?description=wireless&minPrice=50&maxPrice=
 http://localhost:8070/products/name?name=laptop  
 http://localhost:8070/products/nameContaining?name=smart  
 
-http://localhost:8070/addresses?city=Springfield&state=IL&country=USA&postalCode=62701&userId=1&userName=john_doe&strategy=qdsl  
-http://localhost:8070/addresses?city=Springfield&state=IL&country=USA&postalCode=62701&userId=1&userName=john_doe&strategy=jpa
+http://localhost:8070/addresses?city=Springfield&state=IL&country=USA&postalCode=62701&userId=1&userName=john_doe&service=qdsl  
+http://localhost:8070/addresses?city=Springfield&state=IL&country=USA&postalCode=62701&userId=1&userName=john_doe&service=jpa
 
 
